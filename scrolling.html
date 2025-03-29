@@ -22,30 +22,26 @@
 <body>
     <div class="h-[400px] bg-red-50"></div>
     <div class="racesWrapper">
-        <div class="races flex justify-between">
+        <div class="races flex justify-between min-h-screen items-center">
             <p>austria</p>
             <p>japan</p>
             <p>india</p>
             <p>canada</p>
         </div>
     </div>
-    <div class="h-[400px] bg-red-50"></div>
-  <script>
-    window.onload = function () {
+    <div class="min-h-screen bg-red-50"></div>
+    <script>
         const races = document.querySelector(".races");
         let racesWidth = races.offsetWidth;
-        let amountToScroll = racesWidth - window.innerWidth;
-
-        if (amountToScroll < 0) {
-            amountToScroll = 0; // Prevent negative scrolling
-        }
+        let amountToScroll = racesWidth - window.innerWidth
 
         const tween = gsap.to(races, {
             x: -amountToScroll,
             duration: 3,
             ease: "none",
-        });
+        }
 
+        )
         ScrollTrigger.create({
             trigger: ".racesWrapper",
             start: "top 20%",
@@ -54,9 +50,10 @@
             animation: tween,
             scrub: 1,
             markers: true
+            // onEnter: tween.play(),
+            // onLeave: tween.reverse(),
         });
-    };
-</script>
+    </script>
 </body>
 
 </html>
