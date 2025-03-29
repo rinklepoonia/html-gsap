@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ====== TAILWIND CSS ======= -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ====== TAILWIND JS ======= -->
+    <script src="./tailwind.config.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/root.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <title>Gsap Task</title>
+</head>
+
+<body>
+    <section class="min-h-screen bg-red-50">
+
+    </section>
+    <section id="twoMountainSection" class="bg-primary min-h-screen relative z-10">
+        <img id="sideArrow" width="660" height="684" class="w-full max-w-[660px] absolute left-[-100%]"
+            src="./assets/images/png/side-arrow.png" alt="side-arrow">
+        <!-- <p class="font-normal text-3xl tracking-[-1%] text-white">Ideata da grazie all’esperienza acquisita nel</p> -->
+        <img id="mountains" class="h-[400px] z-[-1] w-full" src="./assets/images/svg/top-cloud.svg" alt="top-cloud">
+        <div class="flex flex-wrap items-center">
+            <div class="w-[50%]">
+
+            </div>
+            <div id="mountainContentOne" class="w-[50%]  hidden">
+                <p class="font-normal text-[50px] max-w-[690px]">Siamo un’azienda digitale
+                    che si concentra sulla
+                    generazione
+                    di opportunità di business.</p>
+                <div class="flex items-center gap-5">
+                    <img width="51" height="51" src="./assets/images/svg/smil-girl.svg" alt="smile-girl">
+                    <p class="font-light text-2xl text-[#29424D]"><span class="font-normal">Federico,</span> CF
+                        Tecnology Officer</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-wrap items-center">
+            <div class="w-[50%]">
+        
+            </div>
+            <div id="mountainContentTwo" class="w-[50%] hidden">
+                <p class="font-normal text-[50px] max-w-[690px]">Obiettivi chiari e definiti perseguiti con un approccio
+                    personalizzato verso risultati concreti e misurabili.</p>
+                <div class="flex items-center gap-5">
+                    <img width="51" height="51" src="./assets/images/svg/smil-girl.svg" alt="smile-girl">
+                    <p class="font-light text-2xl text-[#29424D]"><span class="font-normal">Federico,</span> CF
+                        Tecnology Officer</p>
+                </div>
+            </div>
+        </div>
+        <img id="topArrow" class="absolute bottom-[10%] right-[104px]" width="43" height="45"
+            src="./assets/images/svg/top-arrow.svg" alt="top-arrow">
+
+    </section>
+    <section id="brand-neu" class="min-h-screen bg-yellow-50">
+
+    </section>
+
+    <script src="./assets/js/script.js"></script>

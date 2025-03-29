@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'mundial';
+    src: url(../fonts/mundial/MundialBlack.otf);
+}
+
+body {
+    font-family: 'mundial';
+}
+
+/* .ff-mundial {
+    font-family: 'mundial';
+} */

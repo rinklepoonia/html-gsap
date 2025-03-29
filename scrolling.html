@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- ====== TAILWIND CSS ======= -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ====== TAILWIND JS ======= -->
+    <script src="./tailwind.config.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <style>
+        p{
+            font-size: 40px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h-[400px] bg-red-50"></div>
+    <div class="racesWrapper">
+        <div class="races flex justify-between">
+            <p>austria</p>
+            <p>japan</p>
+            <p>india</p>
+            <p>canada</p>
+        </div>
+    </div>
+    <div class="h-[400px] bg-red-50"></div>
+  <script>
+    window.onload = function () {
+        const races = document.querySelector(".races");
+        let racesWidth = races.offsetWidth;
+        let amountToScroll = racesWidth - window.innerWidth;
+
+        if (amountToScroll < 0) {
+            amountToScroll = 0; // Prevent negative scrolling
+        }
+
+        const tween = gsap.to(races, {
+            x: -amountToScroll,
+            duration: 3,
+            ease: "none",
+        });
+
+        ScrollTrigger.create({
+            trigger: ".racesWrapper",
+            start: "top 20%",
+            end: "+=" + amountToScroll,
+            pin: true,
+            animation: tween,
+            scrub: 1,
+            markers: true
+        });
+    };
+</script>
+</body>
+
+</html>
